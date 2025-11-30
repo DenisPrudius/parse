@@ -1,7 +1,6 @@
-import csv
 import json
 import time
-from dataclasses import dataclass, fields, astuple, asdict
+from dataclasses import dataclass, fields, asdict
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup, Tag
@@ -84,11 +83,6 @@ def parse_single_product(product: Tag) -> Product:
     )
 
 
-def write_to_csv(products):
-    with open("results.csv", "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(PRODUCT_FIELDS)
-        writer.writerows([astuple(product) for product in products])
 
 def write_to_json(products):
     data = [asdict(product) for product in products]
@@ -98,7 +92,6 @@ def write_to_json(products):
 
 def main():
     products = get_products()
-    write_to_csv(products)
     write_to_json(products)
     print(f"Save {len(products)} products in results.csv")
 
