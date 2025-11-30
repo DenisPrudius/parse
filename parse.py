@@ -1,6 +1,7 @@
 import csv
+import json
 import time
-from dataclasses import dataclass, fields, astuple
+from dataclasses import dataclass, fields, astuple, asdict
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup, Tag
@@ -89,10 +90,16 @@ def write_to_csv(products):
         writer.writerow(PRODUCT_FIELDS)
         writer.writerows([astuple(product) for product in products])
 
+def write_to_json(products):
+    data = [asdict(product) for product in products]
+    with open("results.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 def main():
     products = get_products()
     write_to_csv(products)
+    write_to_json(products)
     print(f"Save {len(products)} products in results.csv")
 
 if __name__ == "__main__":
