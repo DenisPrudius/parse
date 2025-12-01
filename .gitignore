@@ -1,3 +1,5 @@
 .idea
 .venv
 venv
+all_in_one.py
+images/
