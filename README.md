@@ -58,5 +58,47 @@ The script will:
 
 The browser will close automatically when done.
 
+## 📃 Sample Output
+
+```json
+[
+    {
+        "title": "Батарейки Kodak, Type D, лужні, комплект з 3 штук",
+        "current_price": 325.0,
+        "old_price": null,
+        "rating": 5.0,
+        "image_link": "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://kitka-sonya.com/wp-content/uploads/2024/07/batarejky-1000x1250.png",
+        "description": {
+            "Фірма": "Kodak",
+            "Тип": "Type D",
+            "Вид": "Лужні",
+            "Комплект": "Три штуки"
+        },
+        "image_path": "images/batarejky-1000x1250.png"
+    },
+    {
+        "title": "Автоматична годівниця з Wi-Fi",
+        "current_price": 2229.0,
+        "old_price": 2329.0,
+        "rating": 4.96,
+        "image_link": "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://kitka-sonya.com/wp-content/uploads/2024/07/wi-fi_godivnyczya_golovna-2-1000x1250.png",
+        "description": {
+            "Об‘єм резервуару для корму": "3,5 л",
+            "Висота": "330 мм",
+            "Ширина": "150 мм",
+            "Довжина": "170 мм",
+            "Вага": "1 кг",
+            "Довжина USB кабелю": "150 см",
+            "Батарейки для резервного живлення": "Три штуки типу D (не входять у комплект)",
+            "Діаметр мисочки": "15 см",
+            "Матеріал мисочки": "нержавійка",
+            "Матеріал корпусу": "пластик",
+            "Гарантія": "12 місяців"
+        },
+        "image_path": "images/wi-fi_godivnyczya_golovna-2-1000x1250.png"
+    }
+]
+```
+
 
 
