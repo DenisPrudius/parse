@@ -1,65 +1,62 @@
-# 🐾 Product Parser – Kitka-Sonya Shop
+# Kitka-Sonya WooCommerce Scraper
 
-Цей проєкт — парсер товарів із сайту [kitka-sonya.com](https://kitka-sonya.com/shop/),
-Скрипт написаний на Python проходить каталог товарів, збирає інформацію з плиток та автоматично зберігає дані у json-файл.
+This Python script scrapes all products from [Kitka-Sonya](https://kitka-sonya.com/shop/) and saves them to a JSON file. It also downloads product images locally.
 
----
+## 🚀 Features
 
-## 📌 Функціонал
+- Automatically loads all products using the **Load More** button.
+- Parses the following product details:
+  - Title (`title`)
+  - Current price (`current_price`)
+  - Old price (`old_price`)
+  - Rating (`rating`)
+  - Image URL (`image_link`)
+  - Local image path (`image_path`)
+  - Additional description (`description`)
+- Downloads product images into the `images` folder.
+- Saves all products to `products.json`.
 
-### 🔹 Парсинг товарів
-Зі сторінок каталогу збирається така інформація:
-- **Назва товару**
-- **Ціна**
-- **Ціна зі знижкою(якщо є)**
-- **Рейтинг**
+## ⚙️ Installation
 
-### 🔹 Автоматична пагінація
-Скрипт переходить на наступні сторінки, доки не буде зібрано всі товари.
-
-### 🔹 Збереження результатів
-Усі дані записуються у файл: 
-results.json
-
----
-
-## ▶️ Запуск
-
+1. Clone the repository or download the script:
 
 ```bash
-python parse.py
+git clone <https://github.com/DenisPrudius/parse>
 ```
 
-# (EN)
-# 🐾 Product Parser – Kitka-Sonya Shop
-
-This project is a Python-based web scraper that collects product data from  
-[kitka-sonya.com](https://kitka-sonya.com/shop/).  
-The script iterates through all catalog pages, extracts product information, and saves the results into a json file.
-
----
-
-## 📌 Features
-
-### 🔹 Product Parsing
-The script collects the following data from each product tile:
-- **Product title**
-- **Price**
-- **Discounted price (if available)**
-- **Rating**
-
-### 🔹 Automatic Pagination
-The scraper follows pagination links until all products are collected.
-
-### 🔹 Data Export
-All parsed data is saved into: 
-
-results.json
-
-
----
-
-## ▶️ How to Run
+2. Install dependencies from `requirements.txt`:
 
 ```bash
-python parse.py
+pip install -r requirements.txt
+```
+
+3. Make sure you have **ChromeDriver** installed for Selenium, matching your Chrome version, and added to your system PATH.
+
+**`requirements.txt` content example:**
+
+```
+selenium
+beautifulsoup4
+requests
+```
+
+## 📓 Usage
+
+Run the script:
+
+```bash
+  python parse.py
+```
+
+The script will:
+
+1. Open a browser window.
+2. Load all products by clicking the **Load More** button multiple times.
+3. Parse each product page.
+4. Save the data to `products.json`.
+5. Download all product images to the `images` folder.
+
+The browser will close automatically when done.
+
+
+
