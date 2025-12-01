@@ -21,7 +21,7 @@ This Python script scrapes all products from [Kitka-Sonya](https://kitka-sonya.c
 1. Clone the repository or download the script:
 
 ```bash
-git clone <https://github.com/DenisPrudius/parse>
+git clone https://github.com/DenisPrudius/parse
 ```
 
 2. Install dependencies from `requirements.txt`:
